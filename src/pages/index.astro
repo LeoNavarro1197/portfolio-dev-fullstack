@@ -1,0 +1,83 @@
+---
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import foto from '../assets/image/foto2.jpg';
+import Github from '../components/icons/Github.astro';
+import Linkedin from '../components/icons/Linkedin.astro';
+import Social from '../components/Social.astro';
+import Experience from '../components/Experience.astro';
+import BriefCase from '../components/icons/BriefCase.astro';
+import Projects from '../components/Projects.astro';
+import Code from '../components/icons/Code.astro';
+import Phone from '../components/icons/Phone.astro';
+import '@fontsource-variable/onest';
+import Contact from '../components/Contact.astro';
+import Download from '../components/icons/Download.astro';
+import Footer from '../components/Footer.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<Header />
+	<main class="p-10">
+		<section class="w-full mx-auto pt-30 lg:w-[800px]">
+			<div class="flex flex-row align-middle">
+				<img src={foto.src} alt="Leito" class="w-25 h-25 mb-4 rounded-full object-cover object-center" />
+				<div class="flex justify-center items-center pl-8 pb-3"><Badge>FullStack Developer</Badge>
+				<span class="bg-yellow-100 text-yellow-800 text-sm font-medium me-2 px-3.5 py-0.5 rounded-sm">
+					Mobile Developer
+				</span>
+				</div>
+			</div>
+			<div class="flex flex-row">
+				<h1 class="leading-13 text-balance text-[45px] font-bold flex flex-col gap-x-4 pb-4"><span class="text-orange-300">¡Hola! Soy</span><span class="text-white opacity-90"> Leonardo Navarro</span></h1>
+			</div>
+			<h2 class="text-white text-xl opacity-80"><span class="text-orange-200 opacity-70 font-semibold">FullStack Developer & Mobile Developer</span> en múltiples tecnologías que compiten en el mercado global del Desarrollo de aplicativos. 
+				Siempre abierto a el nuevo aprendizaje y a la colaboración con otros <span class="text-orange-200 opacity-70 font-semibold">desarrolladores.</span></h2>
+			<nav class="flex flex-row gap-x-4 py-6">
+				<Social href="https://github.com/LeoNavarro1197">
+					<Github class="size-4" />
+					GitHub
+				</Social>
+				<Social href="https://www.linkedin.com/in/yeison-leonardo-navarro-cardona-0665712a0/">
+					<Linkedin class="size-4" />
+					LinkedIn
+				</Social>
+			</nav>
+		</section>
+
+		<section id="experiencia" class="w-full mx-auto pt-20 lg:w-[800px]">
+			<h2 class="text-white text-2xl font-bold mb-6 flex flex-row items-center gap-x-2 opacity-90">
+				<BriefCase class="w-6 h-6" />
+				Experiencia
+			</h2>
+			<Experience />
+		</section>
+
+		<section id="proyectos" class="w-full mx-auto pt-20 lg:w-[800px]">
+			<h2 class="text-white text-2xl font-bold mb-6 flex flex-row items-center gap-x-2 opacity-90">
+				<Code class="w-6 h-6" />
+				Proyectos
+			</h2>
+			<Projects />
+		</section>
+		<section id="contacto" class="w-full mx-auto lg:w-[800px] pb-20 pt-20">
+			<h2 class="text-white text-2xl font-bold mb-6 flex flex-row items-center gap-x-2 opacity-90">
+				<Phone class="w-6 h-6" />
+				Contacto
+			</h2>
+			<Contact />
+		</section>
+		<section id="cv" class="w-full mx-auto lg:w-[800px] pb-20 pt-10 text-center">
+			<a href="/CVYeisonLeonardoNavarro.pdf" download class="inline-flex items-center justify-center gap-x-2 px-4 py-2 bg-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 transition-colors duration-300">
+				<Download class="w-5 h-5" />
+				Descargar CV
+			</a>
+			<p class="text-white opacity-70 mt-4">Para descargar mi CV, haz clic en el botón de arriba.</p>
+		</section>
+		<Footer />
+	</main>
+</Layout>

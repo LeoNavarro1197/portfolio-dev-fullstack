@@ -1,0 +1,186 @@
+---
+import ScreenShotPagePomodoro from '../assets/projects/pomodoro.webp';
+import ScreenShotPageRick from '../assets/projects/rickandmorty.webp';
+import ScreenShotPageMyWork from '../assets/projects/mywork.webp';
+import ScreenShotPageIA from '../assets/projects/ia.webp';
+import ScreenShotPageVR from '../assets/projects/vr.webp';
+import ScreenShotPageMario from '../assets/projects/mario.webp';
+import ScreenShotItch from '../assets/projects/itch.webp';
+import ScreenShotLanding from '../assets/projects/landing.webp';
+import ScreenShotZenith from '../assets/projects/zenith.webp';
+import Tailwind from './icons/Tailwind.astro';
+import React from './icons/React.astro';
+import Social from './Social.astro';
+import Github from './icons/Github.astro';
+import Web from './icons/Web.astro';
+import ArtStation from './icons/ArtStation.astro';
+import Expo from './icons/Expo.astro';
+import Blender from './icons/Blender.astro';
+import TypeScript from './icons/TypeScript.astro';
+import Unity from './icons/Unity.astro';
+import Python from './icons/Python.astro';
+import Csharp from './icons/Csharp.astro';
+import JavaScript from './icons/JavaScript.astro';
+import Phaser from './icons/Phaser.astro';
+import Itch from './icons/Itch.astro';
+import Next from './icons/NextJS.astro';
+import PlayStore from './icons/PlayStore.astro';
+import Adobe from './icons/Adobe.astro';
+
+const TAGS = {
+    TAILWIND: {
+        name: 'Tailwind',
+        icon: Tailwind
+    },
+    REACTN: {
+        name: 'React NT',
+        icon: React
+    },
+    REACT: {
+        name: 'React',
+        icon: React
+    },
+    EXPO: {
+        name: 'Expo',
+        icon: Expo
+    },
+    BLENDER: {
+        name: 'Blender',
+        icon: Blender
+    },
+    TYPESCRPT: {
+        name: 'TypeScript',
+        icon: TypeScript
+    },
+    UNITY:{
+        name: 'Unity',
+        icon: Unity
+    },
+    PYTHON:{
+        name: 'Python',
+        icon: Python
+    },
+    CSHARP:{
+        name: 'C#',
+        icon: Csharp
+    },
+    JAVASCRIPT:{
+        name: 'JavaScript',
+        icon: JavaScript
+    },
+    PHASER:{
+        name: 'Phaser',
+        icon: Phaser
+    },
+    ITCH:{
+        name: 'Itch',
+        icon: Itch
+    },
+    NEXT:{
+        name: 'NextJS',
+        icon: Next
+    },
+    PLAYSTORE:{
+        name: 'PlayStore',
+        icon: PlayStore
+    },
+    ADOBE:{
+        name: 'Adobe',
+        icon: Adobe
+    }
+}
+
+const PROJECTS = [
+    {
+        title: 'IA Generativa',
+        description: 'IA Generativa desarrollada con Python, React y threeJS para la implementación del modelo y animaciones en 3D.',
+        link: 'https://revistas.sena.edu.co/index.php/rediis/article/view/7142',
+        artstation: 'https://www.artstation.com/artwork/8ByBWO',
+        image: ScreenShotPageIA,
+        tags: [TAGS.REACT, TAGS.PYTHON, TAGS.BLENDER]
+    },
+    {
+        title: 'Landing Page',
+        description: 'Este proyecto es una landing premium para el mando Elite 2 con un hero de scrollytelling que anima una secuencia sincronizada al scroll.',
+        link: 'https://scrolling-landing-page.vercel.app',
+        github: 'https://github.com/LeoNavarro1197/scrolling-landing-page',
+        image: ScreenShotLanding,
+        tags: [TAGS.NEXT, TAGS.REACT, TAGS.TYPESCRPT, TAGS.TAILWIND]
+    },
+    {
+        title: 'Rick And Morty App',
+        description: 'App en React Native y Expo con expo-router, que utiliza NativeWind para estilos y muestra personajes de Rick and Morty mediante su API.',
+        link: 'https://rickandmorty-character-leo.netlify.app',
+        github: 'https://github.com/LeoNavarro1197/character-rickandmorty-react-native',
+        artstation: 'https://www.artstation.com/artwork/x3rYGE',
+        image: ScreenShotPageRick,
+        tags: [TAGS.REACTN, TAGS.EXPO, TAGS.TAILWIND]
+    },
+    {
+        title: 'Pomodoro Time App',
+        description: 'App de temporizador Pomodoro desarrollado con React Native, Expo y TypeScript con cambio automático entre modos y efectos de sonido.',
+        link: 'https://pomodoro-time-leo.netlify.app',
+        github: 'https://github.com/LeoNavarro1197/pomodoro-time',
+        artstation: 'https://www.artstation.com/artwork/XJ2b2y',
+        image: ScreenShotPagePomodoro,
+        tags: [TAGS.REACTN, TAGS.EXPO, TAGS.TYPESCRPT]
+    },
+    {
+        title: 'Super Mario Bros JS',
+        description: 'Super Mario Bros desarrollado con Phaser JS, con diferentes escenas y niveles, con efectos de sonido, animaciones y cámara dinámica.',
+        link: 'https://super-mario-bros-game.netlify.app',
+        github: 'https://github.com/LeoNavarro1197/super-mario-bros',
+        image: ScreenShotPageMario,
+        tags: [TAGS.JAVASCRIPT, TAGS.PHASER]
+    },
+]
+
+---
+
+{
+    PROJECTS.map(({title, description, link, artstation, github, image, tags}) => (
+        <div class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 pb-20">
+            <div class="w-full md:w-1/2">
+                <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                    <img class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" src={image.src} alt={title} />
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 md:max-w-lg">
+                <h3 class="text-2xl font-bold text-white">{title}</h3>
+                <ul class="flex flex-row gap-x-2 py-3">
+                        {tags.map((tag) => (
+                            <li>
+                                <span class="flex flex-row text-xs items-center justify-center gap-x-2 bg-slate-900/90 border border-white/10 rounded-full px-4 py-1">
+                                    <tag.icon class="size-4" />
+                                    <div class="opacity-70">{tag.name}</div>
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                <div class="flex flex-wrap">
+                    <p class="text-white opacity-80">{description}</p>
+                </div>
+                <div class="flex flex-row gap-x-2 py-3 text-sm">
+                    { link &&(
+                        <Social href={link}>
+                            <Web class="size-4" />
+                            Web
+                        </Social>
+                    )}
+                    { artstation && (
+                        <Social href={artstation}>
+                            <ArtStation  />
+                            ArtStation
+                        </Social>
+                    )}
+                    {github && (
+                        <Social href={github}>
+                            <Github class="size-4" />
+                            GitHub
+                        </Social>
+                    )}  
+                </div>
+            </div>
+        </div>
+    ))
+}

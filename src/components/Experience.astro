@@ -1,0 +1,45 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+
+const EXPERIENCE = [
+    {
+        title: 'Desarrollador y Promotor de Inteligencias Artificiales - Servicio Nacional de Aprendizaje SENA',
+        description: 'Dirigí el desarrollo integral y la continua reingeniería del sistema de IA generativa (RAG), incluyendo refactorización del código backend, optimización de prompts y lógica principal, y mejora significativa de la interfaz frontend (Markdown, funcionalidad de voz y micrófono multiplataforma). Además, Promoví el uso de IA en la institución. y También, llevé a cabo la alimentación y curación exhaustiva de la base de conocimiento de "AzuSena", incrementando sustancialmente su capacidad para ofrecer respuestas precisas y relevantes, lo que potenció su viabilidad para una amplia gama de casos de uso institucionales. Y por último, brindé acompañamiento técnico y estratégico constante, identificando oportunidades de aplicación de IA y articulando acciones (inducciones, conferencias) que fomentaron la colaboración interdependencia y la cultura digital en la entidad.',
+        date: 'Abril 2025 - Diciembre 2015',
+    },
+    {
+        title: 'Desarrollador de Software - Servicio Nacional de Aprendizaje SENA',
+        description: 'Generé embeddings para optimizar el procesamiento semántico y la comprensión del lenguaje natural de una inteligencia artificial. También, Integré un rostro animado modelado en 3D y sus texturas en un aplicativo web desarrollado en React, asegurando transiciones suaves y sincronización de animaciones durante las interacciones de la IA. También, Diseñé y desarrollé un simulador de farmacia en realidad virtual utilizando Unity, abarcando procesos clave como proveedores, adquisición, recepción administrativa y técnica, almacenamiento y dispensación.',
+        date: 'Mayo 2024 - Diciembre 2024',
+        link: 'https://revistas.sena.edu.co/index.php/rediis/article/view/7142'
+    },
+    {
+        title: 'Desarrollador Multiplataforma - Toy Cantando',
+        description: 'Desarrollé y mantuve 11 aplicativos móviles en Unity, Android Studio y Xcode, utilizando principalmente C#, JAVA y XML, con conocimientos básicos en Swift, SwiftUI y UIKit. Logré dar mantenimiento efectivo a aplicaciones en diversas plataformas, implementar Firebase y AdMob en proyectos para Android e iOS, actualizar constantemente contenido en Google Play Console y App Store Connect, crear estrategias de campaña en Google ADS, y monitorear métricas en Google Play Console, Google AdMob, Google ADS y App Store Connect.',
+        date: 'Noviembre 2022 - Octubre 2023',
+        link: 'https://play.google.com/store/apps/developer?id=Canciones+Infantiles+Toycantando&hl=es',
+    },
+    {
+        title: 'Desarrollador Front-End - GuruSoft',
+        description: 'Trabajé como desarrollador front-end de un aplicativo de facturación electrónica utilizando HTML5, CSS3 y JS puro (sin frameworks de JavaScript). Implementé AJAX para el consumo de APIs y Bootstrap 5 como framework de diseño. Entre mis logros destacan: optimizar la experiencia del usuario con una interfaz intuitiva y funcional, lograr una integración eficiente de APIs con comunicación rápida entre front-end y back-end, implementar estándares web modernos para asegurar compatibilidad y rendimiento óptimo, y desarrollar un diseño responsivo que funciona tanto en dispositivos móviles como de escritorio.',
+        date: 'Septiembre 2021 - Febrero 2022',
+    },
+]
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-2.5">
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-6">        
+                <ExperienceItem 
+                    title={experience.title} 
+                    description={experience.description} 
+                    date={experience.date} 
+                    link={experience.link} 
+                />
+            </li>
+        ))
+    }
+</ol>
+
